@@ -1,0 +1,275 @@
+  <style type = "text/css">
+	
+    #menu {	
+	  color: black;
+	  background-color: white;
+      height: 5%;
+      width: 100%;
+      margin-left: 2em;	  
+	}
+	#menu li {
+	  list-style-type: none;
+	  float:left;
+	  width: 14em;
+	  text-align: right;
+	}
+	
+	#wrapper{
+		width:880px;
+		margin:0 auto;
+		margin-top:2px;
+	}
+
+	#navi {
+		position:relative;
+		left:100px;
+		width:880px;
+		margin:0 auto;
+	}
+	
+	ul#navigation {
+		margin:0px auto;
+		position:relative;
+		float:left;
+		border-left:0px solid #c4dbe7;
+		border-right:2px solid #c4dbe7;
+	}
+
+	ul#navigation li {
+		display:inline;
+		font-size:12px;
+		font-weight:bold;
+		margin:0;
+		padding:0;
+		float:left;
+		position:relative;
+		border-top:1px solid #c4dbe7;
+		border-bottom:2px solid #c4dbe7;
+	}
+
+	ul#navigation li a {
+		padding:10px 23px;
+		color:#616161;
+		text-shadow:1px 1px 0px #fff;
+		text-decoration:none;
+		display:inline-block;
+		border-right:1px solid #fff;
+		border-left:1px solid #C2C2C2;
+		border-top:1px solid #fff;
+		background: #f5f5f5;
+		
+		-webkit-transition:color 0.2s linear, background 0.2s linear;	
+		-moz-transition:color 0.2s linear, background 0.2s linear;	
+		-o-transition:color 0.2s linear, background 0.2s linear;	
+		transition:color 0.2s linear, background 0.2s linear;	
+	}
+
+	ul#navigation li a:hover {
+		background:#f8f8f8;
+		color:#282828;
+	}
+
+	ul#navigation li:hover > a {
+		background:#fff;
+	}
+
+	/* Drop-Down navigation */
+	ul#navigation li:hover > ul
+	{
+		visibility:visible;
+		opacity:1;
+	}
+
+	ul#navigation ul, ul#navigation ul li ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;    
+		visibility:hidden;
+		position: absolute;
+		z-index: 99999;
+		width:180px;
+		background:#f8f8f8;
+		box-shadow:1px 1px 3px #ccc;
+		opacity:0;
+		-webkit-transition:opacity 0.2s linear, visibility 0.2s linear; 
+		-moz-transition:opacity 0.2s linear, visibility 0.2s linear; 
+		-o-transition:opacity 0.2s linear, visibility 0.2s linear; 
+		transition:opacity 0.2s linear, visibility 0.2s linear; 	
+	}
+
+	ul#navigation ul {
+		top: 43px;
+		left: 1px;
+	}
+
+	ul#navigation ul li ul {
+		top: 0;
+		left: 181px;
+	}
+
+	ul#navigation ul li {
+		clear:both;
+		width:100%;
+		border:0 none;
+		border-bottom:1px solid #c9c9c9;
+	}
+
+	ul#navigation ul li a {
+		background:none;
+		padding:7px 15px;
+		color:#616161;
+		text-shadow:1px 1px 0px #fff;
+		text-decoration:none;
+		display:inline-block;
+		border:0 none;
+		float:left;
+		clear:both;
+		width:150px;
+	}
+
+	ul#navigation li a.first {
+		border-left: 0 none;
+	}
+
+	ul#navigation li a.last {
+		border-right: 0 none;
+	}
+	
+    #all {
+      display: box;
+      box-orient: vertical;		  
+    }
+    #all strong {		
+      color: orange;
+	  font-size: 130%;
+    }
+	
+    #main {
+	  display: box;
+      display: -moz-box;
+      display: -webkit-box;
+      display: -ms-box;
+      box-orient: horizontal;	  
+	  color: white;
+	  background-color: black;
+      height: 50%;
+      width: 100%;
+	  font-family:"Montserrat" !important;
+	  font-weight:400 !important;		
+	  font-size: 100%;
+	  justify-content: center;
+	  align-items: center;
+    }	
+	
+    #nav {
+      box-flex: 1;
+	  width: 25%;  
+    }  
+    #nav a {		
+      color: white;
+    }
+    #nav li {		
+      list-style-type: "> ";
+	  color: red;
+    }
+	
+    #resources {
+      box-flex: 3;
+	  width: 60%;
+
+    }	
+    #resources h3{
+	  font-family:"Montserrat" !important;
+	  font-weight:300 !important;		
+	  font-size: 120%;
+    }
+	
+	#myform 
+	  fieldset {
+		width: 680px;
+		height: 430px;
+		background-color: red;
+		margin-left: 0px;
+		margin-right: auto;
+		box-shadow: 5px 5px 5px gray;
+	  }
+	#myform
+	  label {
+		color: double white;
+		float: left;
+		clear: left;
+		width: 300px;
+		text-align: right;
+		padding-right: 1em;
+	  }
+	#myform
+	  textarea {
+		float:left;
+		margin-left: 5em;
+		color: black;
+	  }
+	#myform			   
+	  input {
+		float: left;
+		margin-left: 5em;
+		color: black;
+	  }
+	#myform	  
+	  select {
+		float:left;
+		margin-left: 5em;
+		color: black;
+	  }
+	#myform	  
+	  :required {
+		border: 1px solid red;
+	  }
+	#myform	  
+	  :invalid {
+		color: black;
+		background-color: red;
+	  }
+	#myform	  
+	  button {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		clear: both;
+	  }	
+
+	#submit {
+      float: right;
+	  background-color: lightyellow;
+	}
+	
+    #content {
+	  display: box;
+      display: -moz-box;
+      display: -webkit-box;
+      display: -ms-box;
+      box-orient: horizontal;	  
+	  color: black;
+	  background-color: white;
+      height: 100%;
+      width: 100%;
+	  border-top: 1em double white;
+    }
+	
+    #contentCenter {
+      box-flex: 1;
+	  margin-left: 2em;
+	  width: 99%;
+	  text-align: left;
+    }
+    
+    footer {
+      display:block;
+      text-align: center;
+	  color: white;
+	  background-color: black;
+    }
+	footer a {		
+      color: white;
+    }
+	
+  </style>
