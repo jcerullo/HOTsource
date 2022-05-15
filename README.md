@@ -1,3 +1,13 @@
+# **The Hands On Technology (HOT) website source code**
+This repository contains the source code required to implement the H.O.T. website from a local webserver.
+
+Installation is accomplished by adding a new sub-directory (e.g. HOT) into the existing directory containing your webserver source code (e.g. for the apache webserver 
+the source code is usually found in the /var/www/html directory), and then adding the contents of this repository into the new sub-directory. 
+
+The end result of a standard installation is that the contents of this repository is loaded to a directory named /var/www/html/HOT. The HOT website is then executed
+from a browser with URL address https://yourdomain/HOT.
+ 
+
 # **HOT Reference Library**
 This project started as an answer to the question of how HandsOnTechnology (HOT) members could best stay informed of each other's 3D printer purchases.
 It evolved into a general search and personal data maintenance system.
@@ -11,6 +21,7 @@ Features:
 3. Members have total control over the data stored in the System.  So, for purposes of information search, members can change or delete their name, email address, village, 3D printers, or any other information that has been collected or might be collected in the future.
 4. A member is initially identified in the Search System with the email address originally entered in the new member questionnaire.  A member is allowed to change the email address used by the Search System and it has no effect on any Discussion Group email addresses.
 5. The Reference Library is typically hosted on a Raspberry Pi with latest raspian OS running a LAMP stack. 
+
 
 ## **Direct Callable Web Pages:**
        
