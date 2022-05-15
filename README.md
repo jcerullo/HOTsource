@@ -1,10 +1,10 @@
 # **The Hands On Technology (HOT) website source code**
-This repository contains the source code required to implement the H.O.T. website from a local webserver.
+The repository at https://github.com/jcerullo/HOTsource contains the source code required to implement the H.O.T. website from a local webserver.
 
 Installation is accomplished by adding a new sub-directory (e.g. HOT) into the existing directory containing your webserver source code (e.g. for the apache webserver 
-the source code is usually found in the /var/www/html directory), and then adding the contents of this repository into the new sub-directory. 
+the source code is usually found in the /var/www/html directory), and then adding the contents of the repository into the new sub-directory. 
 
-The end result of a standard installation is that the contents of this repository is loaded to a directory named /var/www/html/HOT. The HOT website is then executed
+The end result of a standard apache installation is that the contents of the repository is loaded to a directory named /var/www/html/HOT. The HOT website is then executed
 from a browser with URL address https://yourdomain/HOT.
  
 
