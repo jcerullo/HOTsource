@@ -25,7 +25,7 @@ $thisDate = '';
 
 $vhotsmcomp = array();
 $i = 0;
-if (($handle = fopen('vhotsmcomp.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('https://thevillages.duckdns.org/HOT/vhotsmcomp.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {         
         $vhotsmcomp[$i] = $data[0];
 		if (isset($data[6]) && is_numeric($data[6]) && is_numeric($data[7]) && is_numeric($data[8])) $thisDate = $data[6]."-".$data[7]."-".$data[8];		
@@ -39,7 +39,7 @@ if (($handle = fopen('vhotsmcomp.csv', 'r')) !== FALSE) {
 
 $vhot3dprint = array();
 $i = 0;
-if (($handle = fopen('vhot3dprint.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('https://thevillages.duckdns.org/HOT/vhot3dprint.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {          
         $vhot3dprint[$i] = $data[0];
 		if (isset($data[6]) && is_numeric($data[6]) && is_numeric($data[7]) && is_numeric($data[8])) $thisDate = $data[6]."-".$data[7]."-".$data[8];
@@ -53,7 +53,7 @@ if (($handle = fopen('vhot3dprint.csv', 'r')) !== FALSE) {
 
 $vhotBoth = array();
 $i = 0;
-if (($handle = fopen('HOTmembers.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('https://thevillages.duckdns.org/HOT/HOTmembers.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { 
 		$HOTmember = $data[1];
 		if ( in_array($HOTmember, $vhotsmcomp) && in_array($HOTmember, $vhot3dprint) && ! in_array($HOTmember, $vhotBoth) ) $vhotBoth[$i] = $HOTmember;                              
@@ -66,7 +66,7 @@ if (($handle = fopen('HOTmembers.csv', 'r')) !== FALSE) {
 
 $hot = array();
 $i = 0;
-if (($handle = fopen('HOTmembers.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('https://thevillages.duckdns.org/HOT/HOTmembers.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {          
         $hot[$i] = $data[0];                      
 		$i++;
