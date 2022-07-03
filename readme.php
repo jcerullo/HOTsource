@@ -1,5 +1,6 @@
 <?php
-header("Content-Type: text/html;charset=utf-8" );
+header('Cache-Control: no cache'); 
+session_cache_limiter('private_no_expire');
 require 'parsedown.php';
 
 $contents = file_get_contents('README.md');

@@ -300,16 +300,22 @@ HERE;
   </style>
 	   
 <?php      
-print " <h2><strong> Library Login Credentials are displayed below during the library signup period.</h2>";
+print " <h2><strong> Library Login Credentials are displayed below during the library signup period.<br>
+		If nothing is displayed after pressing the submit button, then check your spelling and try again. <br>
+		If all else fails, please email the database administrator at jcerullo@yahoo.com</strong></h2>";
 
 if (sizeof($LastlastNames) == 0 && sizeof($lastNames) == 1) {
 	print "<p> Email Address = <strong> $emailAddresses[0] </strong></p>";
-	print "<p> Password = <strong>$passwords[0] </strong> </p>";
+	$displayedpwd = $passwords[0];
+	if ($displayedpwd != 'changeme') $displayedpwd = '*******';
+	print "<p> Password = <strong>$displayedpwd </strong> </p>";
 }
 
 if (sizeof($LastlastNames) == 1) {
 	print "<p> Email Address = <strong> $LastemailAddresses[0] </strong></p>";
-	print "<p> Password = <strong>$Lastpasswords[0] </strong> </p>";
+	$displayedpwd = $Lastpasswords[0];
+	if ($displayedpwd != 'changeme') $displayedpwd = '*******';
+	print "<p> Password = <strong>$displayedpwd </strong> </p>";
 }
 
 $logins =  sizeof($LastlastNames);
@@ -318,7 +324,9 @@ if ($logins > 1) {
 	for ($i=0; $i<sizeof($LastlastNames); $i++) {
 			if (strtolower($LastfirstNames[$i]) == strtolower($firstNameEntered) && strtolower($LastlastNames[$i]) == strtolower($lastNameEntered)) {
 				print " Email Address = $LastemailAddresses[$i] <br>";
-				print " Password = $Lastpasswords[$i] <br><br>";
+				$displayedpwd = $Lastpasswords[$i];
+				if ($displayedpwd != 'changeme') $displayedpwd = '*******';
+				print " Password = $displayedpwd  <br><br>";
 			}
 	}
 }
