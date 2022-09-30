@@ -10,9 +10,7 @@ from a browser with URL address https://yourdomain/HOT.
 To update the HOT source code in the Home Assistant add-on, simply copy the contents of the repository to /share/htdocs.  Neither the HOT add-on nor home assistant 
 require a restart after updating the source code.
 
-# **HOT Reference Library**
-This project started as an answer to the question of how HandsOnTechnology (HOT) members could best stay informed of each other's 3D printer purchases.
-It evolved into a general search and personal data maintenance system.
+# **HOT Reference Library (Extentions to the Official HOT Website)**
 
 The HOT Reference Library is a web-based application to help members find club-related information (persons, places and things).  
 

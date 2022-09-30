@@ -2,6 +2,7 @@
   session_start();
   $validUntilDate = "2022-12-31";
   $today = date("Y-m-d");
+  $emailEntered = '';
 ?>
 <!DOCTYPE html>
 <html>
