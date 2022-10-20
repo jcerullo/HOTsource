@@ -296,7 +296,7 @@ print"	 <h2><strong>Active members of the Hands On Technology club are: </strong
 
         $query = "SELECT *
 		                 FROM members
-						 WHERE status != 'D'
+						 WHERE status = 'A'
 						 ORDER BY firstName, lastname "
 						 ;
         

@@ -294,6 +294,10 @@
     <div id = "main">
 	<div id = "nav">
 	        <br><br>
+			<p> This page contains all of the personal information that you have submitted 
+				to the club through questionaires and surveys. You can update or delete any of the information 
+				by submitting the CHANGE FORM to the right.</p>
+			<br><br>
         <ul>
           <li><a href = "mbrProfile.php"> Extended Profile</a></li><br>
         </ul>
