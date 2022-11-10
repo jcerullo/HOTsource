@@ -25,7 +25,7 @@ $thisDate = '';
 
 $vhotsmcomp = array();
 $i = 0;
-if (($handle = fopen('https://thevillages.duckdns.org/HOT/vhotsmcomp.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('vhotsmcomp.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {         
         $vhotsmcomp[$i] = $data[0];
 		if (isset($data[6]) && is_numeric($data[6]) && is_numeric($data[7]) && is_numeric($data[8])) $thisDate = $data[6]."-".$data[7]."-".$data[8];		
@@ -39,7 +39,7 @@ if (($handle = fopen('https://thevillages.duckdns.org/HOT/vhotsmcomp.csv', 'r'))
 
 $vhot3dprint = array();
 $i = 0;
-if (($handle = fopen('https://thevillages.duckdns.org/HOT/vhot3dprint.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('vhot3dprint.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {          
         $vhot3dprint[$i] = $data[0];
 		if (isset($data[6]) && is_numeric($data[6]) && is_numeric($data[7]) && is_numeric($data[8])) $thisDate = $data[6]."-".$data[7]."-".$data[8];
@@ -53,7 +53,7 @@ if (($handle = fopen('https://thevillages.duckdns.org/HOT/vhot3dprint.csv', 'r')
 
 $vhotBoth = array();
 $i = 0;
-if (($handle = fopen('https://thevillages.duckdns.org/HOT/HOTmembers.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('HOTmembers.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { 
 		$HOTmember = $data[1];
 		if ( in_array($HOTmember, $vhotsmcomp) && in_array($HOTmember, $vhot3dprint) && ! in_array($HOTmember, $vhotBoth) ) $vhotBoth[$i] = $HOTmember;                              
@@ -66,7 +66,7 @@ if (($handle = fopen('https://thevillages.duckdns.org/HOT/HOTmembers.csv', 'r'))
 
 $hot = array();
 $i = 0;
-if (($handle = fopen('https://thevillages.duckdns.org/HOT/HOTmembers.csv', 'r')) !== FALSE) {      
+if (($handle = fopen('HOTmembers.csv', 'r')) !== FALSE) {      
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {          
         $hot[$i] = $data[0];                      
 		$i++;
@@ -182,6 +182,8 @@ if (($handle = fopen('https://thevillages.duckdns.org/HOT/HOTmembers.csv', 'r'))
 
 	
 // Print stats by year
+	print "<br><br><strong>If you are interested in how our membership has changed over time, </strong> ";
+	print "<br><strong>the following information is informative. </strong> ";
 	print "<br><br><strong>Below are active member counts by join year.  Each line is an exclusive set (no overlap). </strong> ";
 	print "<br><strong>e.g. To find the number of currently active members who joined the club in 2017,  add the first three lines. </strong> ";
 	print "<br><br> ";
