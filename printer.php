@@ -113,7 +113,9 @@
 		</li>
 		<li><a href="#">Projects &raquo;</a>
 			<ul>	
-				<li><a href="projectSearch.php">Project Search</a></li>
+				<li><a href="projectSearch.php">General Project Search</a></li>
+				<li><a href="projectSearchSmComp.php">Small Computer Projects</a></li>
+				<li><a href="projectSearch3dPrint.php">3D Printer Projects</a></li>
 			</ul>				
 		</li>
 		<li><a href="#">Help &raquo;</a>
@@ -146,7 +148,8 @@ print <<<HERE
 				<textarea id="txt_printerText" 
 						  name="printerText"
 						  rows= "2"
-						  columns="2"> </textarea><br>
+						  columns="2"
+						  placeholder="Paste text here"></textarea><br>
 
 				<input type="submit" value = "submit" id = "submit"/> 
 				

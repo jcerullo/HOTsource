@@ -5,15 +5,18 @@
 	if (isset($_SESSION["password"])) $password = $_SESSION["password"];
 	$db_setup = FALSE;
 	include("session.php");                                                                  // Temporary override of session variables
-	if ($db_setup != TRUE) {	
+	if ($db_setup == FALSE) {
+		$timeout = 2;
+		$old = ini_set('default_socket_timeout', $timeout);		
 		$file = fopen ("https://thevillages.duckdns.org/HOT/remote_session.source", "r");    // Check DB server availability
-		if (! $file) $db_setup = FALSE;			
+		ini_set('default_socket_timeout', $old);
+		if ($file == NULL) $db_setup = FALSE;			
 		else {
 			fclose($file);
 			include("https://thevillages.duckdns.org/HOT/remote_session.source");            // Set session variables for DB access
 		}
 	}
-// 	$db_setup = FALSE;                                                                       // Simulate Library Closed
+//	$db_setup = FALSE;                                                                       // Uncomment to simulate Library Closed
 ?>	  
 <html>
 <head>
@@ -42,7 +45,7 @@
 
   <div id = "menu">
         <ul>
-		  <li><a href = "index.html"><img src = "images/hot-org-logo.png"></a></li>
+		  <li><a href = "index.html"><img src = "images/hot-org-logo.png" alt = "Do not press the HELP button."></a></li>
           <li><a href = "libraryCredentials.php">HELP </a></li>                                                  
         </ul><br><br>
   </div>
@@ -92,8 +95,10 @@ print <<<HERE
 
 	  
 	  <h4>The library is normally open 24/7.  Please email John Cerullo at jcerullo@yahoo.com <br>
-	  to determine if a problem exists on the server end.</h4><br><br>
-	  	
+	  to determine if a problem exists on the server end.</h4><br>
+	  
+	  <h4>Press the back arrow to return to the previous page.</h4><br><br>
+	  	  	
       </div>
     </div>
   </div>
@@ -124,7 +129,7 @@ HERE;
       <br><br>
 	  <p>Copyright (c) 2020 HandsOnTech.Org <span style='margin-left:6em'>  <a href = "contact.html"> Contact Us </a> </p>
 	  <br><br>
-	     HOT website – self-hosted beta version 1.4 <a href = "library.php"><img src = "images/blackHand.ico"</a>
+	     HOT website – self-hosted beta version 1.5 <a href = "library.php"><img src = "images/blackHand.ico" alt= "Do not press buttons."></a>
 	  <br><br><br>
   </footer>
 
